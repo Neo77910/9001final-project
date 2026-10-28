@@ -1,0 +1,65 @@
+PADLET POST
+===========
+Title:  Sydney Trip Planner
+Image:  padlet_image.png
+Description (~100 words):
+    Sydney Trip Planner helps students and newcomers get around Sydney by train,
+    Metro and the Manly ferry. Type where you are and where you want to go - in
+    any capitals, with a spelling mistake, or as a landmark like "USYD" or
+    "Opera House" - and it finds the fastest route, tells you which lines to
+    take and how many times you need to change. Thinking about where to live?
+    "Where can I go in 30 minutes?" lists every station within your commute.
+    It also remembers your recent trips. Written in Python using a class,
+    Dijkstra's shortest-path algorithm, recursion and file input/output.
+
+
+3-MINUTE PRESENTATION (English script + what to show)
+=====================================================
+
+[0:00-0:30] Why I made it
+    "When I first came to Sydney I didn't know which train to take, and I
+    didn't even know which station was closest to uni. So I built a trip
+    planner that understands names like 'USYD' and finds the fastest route."
+
+[0:30-1:40] Demo  (terminal already open:  python3 trip_planner.py)
+    1  -> From: usyd   To: opera house
+       "It knows USYD means Redfern. Take T1 to Wynyard, change to the
+        City Circle - 13 minutes, 1 change."
+    1  -> From: Paramatta
+       "If I spell it wrong, it suggests Parramatta."  -> type parramatta,
+       To: chatswood
+    2  -> central, 15
+       "Everything I can reach from Central in 15 minutes."
+    4  -> "And it remembers my recent trips in a file."
+
+[1:40-2:40] How it works
+    "All stations come from a text file, so I can add lines without changing
+    the code. The Network class stores the map as a dictionary: each station
+    points to its neighbours and the minutes between them.
+    To find the fastest route I used Dijkstra's algorithm: it keeps choosing
+    the closest unvisited station and updates its neighbours' times. Changing
+    lines adds 5 minutes, so it doesn't change lines for no reason.
+    The 'where can I go' option uses recursion: the function visits a station,
+    then calls itself for each neighbour until the time runs out.
+    I also used try/except so a missing file or a wrong number doesn't crash it."
+
+[2:40-3:00] Ending
+    "Next I'd like to add real timetables from Transport for NSW. Thank you!"
+
+
+LIKELY QUESTIONS (short answers)
+================================
+Q: Why Dijkstra and not just try every route?
+A: Trying every route grows too fast. Dijkstra always expands the closest
+   station first, so the first time it reaches the destination it is fastest.
+
+Q: Where is the base case of your recursion?
+A: When no neighbour can be reached in the minutes left, or we already know a
+   faster way there - then the function does not call itself again.
+
+Q: What happens if stations.txt is missing?
+A: open() raises FileNotFoundError; main() catches it and prints a message.
+
+Q: How do you handle spelling mistakes?
+A: difflib.get_close_matches from Python's standard library compares the
+   text with every station name and suggests the closest ones.

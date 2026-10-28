@@ -1,0 +1,200 @@
+# Sydney Trip Planner - network data
+# Travel times are APPROXIMATE minutes between neighbouring stops (not official timetables).
+#
+# LINE|code|name         starts a line
+# Station|minutes        minutes from the previous stop (0 for the first stop)
+# END                    ends the line
+# ALIAS|landmark|station lets users type a landmark instead of a station
+
+LINE|T1|North Shore & Western Line
+Berowra|0
+Mount Kuring-gai|3
+Mount Colah|3
+Asquith|2
+Hornsby|3
+Waitara|2
+Wahroonga|2
+Warrawee|2
+Turramurra|2
+Pymble|3
+Gordon|2
+Killara|2
+Lindfield|2
+Roseville|2
+Chatswood|3
+Artarmon|2
+St Leonards|2
+Wollstonecraft|2
+Waverton|2
+North Sydney|2
+Milsons Point|2
+Wynyard|3
+Town Hall|2
+Central|2
+Redfern|2
+Strathfield|10
+Lidcombe|5
+Granville|5
+Parramatta|4
+Westmead|3
+Wentworthville|2
+Pendle Hill|2
+Toongabbie|2
+Seven Hills|3
+Blacktown|3
+Doonside|3
+Rooty Hill|3
+Mount Druitt|3
+St Marys|4
+Werrington|3
+Kingswood|2
+Penrith|3
+Emu Plains|3
+END
+
+LINE|T2|Inner West Line
+Central|0
+Redfern|2
+Macdonaldtown|2
+Newtown|1
+Stanmore|2
+Petersham|2
+Lewisham|2
+Summer Hill|2
+Ashfield|2
+Croydon|2
+Burwood|2
+Strathfield|3
+Homebush|2
+Flemington|2
+Lidcombe|2
+Auburn|3
+Clyde|2
+Granville|2
+Harris Park|3
+Parramatta|2
+END
+
+LINE|T4|Eastern Suburbs & Illawarra Line
+Bondi Junction|0
+Edgecliff|2
+Kings Cross|2
+Martin Place|3
+Town Hall|2
+Central|2
+Redfern|2
+Sydenham|4
+Tempe|2
+Wolli Creek|2
+Arncliffe|2
+Banksia|2
+Rockdale|1
+Kogarah|2
+Carlton|2
+Allawah|1
+Hurstville|2
+Penshurst|2
+Mortdale|2
+Oatley|2
+Como|3
+Jannali|2
+Sutherland|3
+Kirrawee|2
+Gymea|2
+Miranda|2
+Caringbah|2
+Woolooware|2
+Cronulla|2
+END
+
+LINE|T8|Airport & South Line
+Central|0
+Green Square|3
+Mascot|2
+Domestic Airport|3
+International Airport|3
+Wolli Creek|3
+Turrella|2
+Bardwell Park|2
+Bexley North|2
+Kingsgrove|2
+Beverly Hills|2
+Narwee|2
+Riverwood|2
+Padstow|3
+Revesby|2
+Panania|2
+East Hills|2
+Holsworthy|4
+Glenfield|5
+Macquarie Fields|3
+Ingleburn|2
+Minto|3
+Leumeah|3
+Campbelltown|3
+Macarthur|3
+END
+
+LINE|T9|Northern Line
+Hornsby|0
+Normanhurst|3
+Thornleigh|2
+Pennant Hills|2
+Beecroft|3
+Cheltenham|2
+Epping|3
+Eastwood|2
+Denistone|2
+West Ryde|2
+Meadowbank|2
+Rhodes|3
+Concord West|2
+North Strathfield|2
+Strathfield|3
+END
+
+LINE|CC|City Circle
+Central|0
+Museum|2
+St James|2
+Circular Quay|3
+Wynyard|2
+Town Hall|2
+END
+
+LINE|M1|Metro North West Line
+Tallawong|0
+Rouse Hill|2
+Kellyville|2
+Bella Vista|2
+Norwest|2
+Hills Showground|2
+Castle Hill|2
+Cherrybrook|3
+Epping|4
+Macquarie University|3
+Macquarie Park|2
+North Ryde|2
+Chatswood|4
+Crows Nest|3
+Victoria Cross|2
+Barangaroo|2
+Martin Place|2
+Gadigal|2
+Central|2
+Waterloo|2
+Sydenham|4
+END
+
+LINE|F1|Manly Ferry
+Circular Quay|0
+Manly|25
+END
+
+ALIAS|USYD|Redfern
+ALIAS|University of Sydney|Redfern
+ALIAS|Opera House|Circular Quay
+ALIAS|Airport|International Airport
+ALIAS|Bondi Beach|Bondi Junction
+ALIAS|Manly Beach|Manly
+ALIAS|Macquarie Uni|Macquarie University
